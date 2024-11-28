@@ -73,12 +73,14 @@
             chat.client.addChatMessage = function (name, receiver, message) {
                 if (active_user == name && receiver != "All users") {
                     $('#messagesClient').append('<div class="bubble-left">' + message + '<br>' + timeFormat(new Date()) + '</div>');
-                    $('#messagesClient').scrollTop = $('#messagesClient').scrollHeight;
+                    const messageList = document.getElementById("messagesClient");
+                    messageList.scrollTop = messageList.scrollHeight;
                     
                 } else {
                     if (receiver == active_user && active_user == "All users") {
                         $('#messagesClient').append('<div class="bubble-left">' + name + ':' + message + '<br>' + timeFormat(new Date()) + '</div>');
-                        $('#messagesClient').scrollTop = $('#messagesClient').scrollHeight;
+                        const messageList = document.getElementById("messagesClient");
+                        messageList.scrollTop = messageList.scrollHeight;
                     } else if (receiver != active_user && receiver == "All users") {
                         notifyContact(receiver);
                     } else {
@@ -123,7 +125,8 @@
                     if ($('#txtMessageClient').val().length != 0) {
                         var innerdata = '<div class="bubble-right">' + $('#txtMessageClient').val() + '<br>' + timeFormat(new Date()) + '</div>'
                         $('#messagesClient').append(innerdata);
-                        $('#messagesClient').scrollTop = $('#messagesClient').scrollHeight;
+                        const messageList = document.getElementById("messagesClient");
+                        messageList.scrollTop = messageList.scrollHeight;
 
                         chat.server.sendChatMessage({ Name: userFullName, Message: $('#txtMessageClient').val(), FriendUniqueId: active_user });
                         $('#txtMessageClient').val('');
@@ -287,7 +290,7 @@
 
                     const messageList = document.getElementById("messagesClient");
                     messageList.scrollTop = messageList.scrollHeight;
-                    console.log(messageList.scrollHeight)
+                    
                 },
                 error: function () {
                     console.error('Error sending input to server');

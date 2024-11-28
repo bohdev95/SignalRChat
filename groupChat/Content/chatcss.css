@@ -1,0 +1,169 @@
+﻿.bubble-dialog {
+    white-space: pre-line;
+    line-height: 0;
+    height: calc(100vh - 400px);
+    overflow-y: auto;
+}
+.label-text{
+    font-size: 1.2em !important;
+}
+.chat-display-border {
+    border: 2px solid #0400ff;
+}
+.bubble-left,
+.bubble-right {
+    line-height: 100%;
+    display: block;
+    position: relative;
+    padding: 1.25em 0.5em;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    border-radius: 11px;
+    margin-bottom: 2em;
+    clear: both;
+    max-width: 50%;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.bubble-left {
+    float: left;
+    margin-left: 30px;
+    background: pink;
+    border: red solid 3px;
+}
+
+.bubble-right {
+    float: right;
+    margin-right: 30px;
+    background: #b6ff00;
+    border: #0d891b solid 3px;
+}
+
+    .bubble-left:after,
+    .bubble-left:before,
+    .bubble-right:after,
+    .bubble-right:before {
+        content: "";
+        position: absolute;
+        top: 21px;
+        border-style: solid;
+        border-width: 13px 17px 13px 0;
+        border-color: transparent pink;
+        display: block;
+        width: 0;
+    }
+
+.bubble-left:after,
+.bubble-left:before {
+    border-width: 13px 17px 13px 0;
+    border-color: transparent pink;
+}
+
+.bubble-right:after,
+.bubble-right:before {
+    border-width: 13px 0 13px 17px;
+    border-color: transparent pink;
+}
+
+.bubble-left:after {
+    left: -16px;
+    border-color: transparent pink;
+    z-index: 1;
+}
+
+.bubble-left:before {
+    left: -19px;
+    border-color: transparent red;
+    z-index: 0;
+}
+
+.bubble-right:after {
+    right: -16px;
+    border-color: transparent #b6ff00;
+    z-index: 1;
+}
+
+.bubble-right:before {
+    right: -19px;
+    border-color: transparent #b6ff00;
+    z-index: 0;
+}
+.Fcolor {
+    color: white;
+}
+
+    .Fcolor:hover {
+        color: green;
+}
+.text-success {
+    color: #00d804 !important;
+}
+.display-flex {
+    display: flex;
+    grid-gap: 1em;
+}
+.left-body {
+    width: 300px;
+}
+.right-body{
+    width: calc(100% - 300px);
+}
+.nav {
+    margin-top: 10px;
+}
+.navbar-link{
+
+    padding: 4px;
+    font-size: 20px;
+    width:100%;
+}
+.navbar-link:hover{
+    cursor:pointer;
+}
+.username {
+    height: 100px;
+    font-size: 36px;
+    overflow: hidden;
+    margin: 10px;
+    color: #5cb85c;
+}
+
+.username:hover {
+    cursor: pointer;
+}
+.form-group, .container-fluid {
+    padding: 10px;
+}
+.sendBtn{
+    height: 35px;
+}
+.display-align-bottom{
+    align-items:flex-end;
+    
+}
+#txtMessageClient{
+    height: 65px;
+    overflow-y: auto;
+}
+.active {
+    background: rgb(224, 250, 255);
+}
+/* Highlight new messages */
+.new-message {
+    background-color: lightyellow;
+    font-weight: bold;
+}
+
+/* Notification badge */
+.notification-badge {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    margin-left: 10px;
+    display: inline-block;
+}

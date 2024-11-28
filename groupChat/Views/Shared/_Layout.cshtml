@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Chat Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        @*<footer>
+                <p>&copy; @DateTime.Now.Year - Chat Application</p>
+            </footer>*@
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <!--Start Footer -->
+    <footer style="background-color: black;" class="container-fluid text-center">
+        <br>
+        <p style="font-size:18px;color: white;">Find me on social media.</p>
+        <a title="Linkedin" href="https://www.linkedin.com/in/robins-mcintosh-7421a5313/" target="_blank"><i class="fa fa-linkedin Fcolor" style="font-size:30px;margin-right:5px;"></i></a>
+        <a title="GitHub" href="https://github.com/bohdev95" target="_blank"><i class="fa fa-github Fcolor" style="font-size:30px;margin-right:5px;"></i></a>
+        <!-- Copyright -->
+        <div style="font-size:18px;color: white;" class="">
+            <br />
+            Copyright ©
+            <script>document.write(new Date().getFullYear());</script> :
+            <a style="color: white" href="https://portfolio-omega-henna-98.vercel.app/" target="_blank"> Robins McIntosh</a>
+        </div>
+        <!-- Copyright -->
+        <br><br>
+    </footer>
+    <!--End Footer -->
+    <img src="" width="1" height="1" id="view" />
+   <script src="~/Scripts/vistor.js"></script>
+</body>
+</html>
